@@ -88,9 +88,9 @@ export default function Navbar() {
               onClick={(e) => {
                 if (mobileMenuOpen) setMobileMenuOpen(false);
               }}
-              className="flex items-center gap-2.5 sm:gap-3 group min-w-0 shrink"
+              className="flex items-center gap-2.5 sm:gap-3 group shrink-0"
             >
-              <div className="w-[44px] h-[44px] sm:w-[50px] sm:h-[50px] rounded-xl bg-white p-1.5 flex items-center justify-center shadow-md shadow-black/25 group-hover:scale-105 transition-transform overflow-hidden border border-[#D4A84F]/50 shrink-0">
+              <div className="w-[42px] h-[42px] sm:w-[48px] sm:h-[48px] lg:w-[46px] lg:h-[46px] xl:w-[50px] xl:h-[50px] rounded-xl bg-white p-1.5 flex items-center justify-center shadow-md shadow-black/25 group-hover:scale-105 transition-transform overflow-hidden border border-[#D4A84F]/50 shrink-0">
                 <Image
                   src="/images/trimurti-symbol.png"
                   alt="Trimurti Enterprises Symbol"
@@ -100,18 +100,18 @@ export default function Navbar() {
                   priority
                 />
               </div>
-              <div className="flex flex-col justify-center min-w-0">
-                <span className="text-lg sm:text-2xl font-bold tracking-tight text-white group-hover:text-[#D4A84F] transition-colors leading-tight truncate">
+              <div className="flex flex-col justify-center shrink-0">
+                <span className="text-lg sm:text-xl lg:text-xl xl:text-2xl font-bold tracking-tight text-white group-hover:text-[#D4A84F] transition-colors leading-tight whitespace-nowrap">
                   Trimurti <span className="text-[#D4A84F]">Enterprises</span>
                 </span>
-                <span className="text-[9px] sm:text-xs tracking-wider uppercase text-gray-300 font-semibold mt-0.5 truncate">
+                <span className="text-[9px] sm:text-[10px] lg:text-[10.5px] xl:text-xs tracking-wider uppercase text-gray-300 font-semibold mt-0.5 whitespace-nowrap">
                   Parking & Valet Management
                 </span>
               </div>
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center gap-7">
+            <nav className="hidden lg:flex items-center gap-3.5 xl:gap-5 2xl:gap-6">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.label}
@@ -122,7 +122,7 @@ export default function Navbar() {
                       scrollToQuoteForm();
                     }
                   }}
-                  className="text-sm font-medium text-gray-200 hover:text-[#D4A84F] transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#D4A84F] hover:after:w-full after:transition-all after:duration-300"
+                  className="text-[13px] xl:text-sm font-medium text-gray-200 hover:text-[#D4A84F] transition-colors relative py-1 whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#D4A84F] hover:after:w-full after:transition-all after:duration-300"
                 >
                   {link.label}
                 </a>
@@ -130,24 +130,25 @@ export default function Navbar() {
             </nav>
 
             {/* Desktop Action Buttons */}
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-lg bg-[#25D366]/15 hover:bg-[#25D366]/25 text-[#25D366] border border-[#25D366]/30 transition-all"
+                className="inline-flex items-center gap-1.5 xl:gap-2 px-2.5 xl:px-3.5 py-2 text-xs font-semibold rounded-lg bg-[#25D366]/15 hover:bg-[#25D366]/25 text-[#25D366] border border-[#25D366]/30 transition-all whitespace-nowrap shrink-0"
                 title="Chat with Trimurti Enterprises on WhatsApp (+91 98228 33831)"
               >
                 <WhatsAppIcon className="w-4 h-4 fill-[#25D366]" />
-                <span>WhatsApp Us</span>
+                <span>WhatsApp<span className="hidden xl:inline"> Us</span></span>
               </a>
 
               <button
                 type="button"
                 onClick={() => scrollToQuoteForm()}
-                className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold uppercase tracking-wider rounded-lg bg-gradient-to-r from-[#D4A84F] to-[#E59A2F] hover:from-[#E59A2F] hover:to-[#D4A84F] text-[#071521] shadow-md shadow-[#D4A84F]/25 hover:shadow-lg hover:shadow-[#D4A84F]/40 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+                className="inline-flex items-center gap-1.5 xl:gap-2 px-3 xl:px-4 py-2 xl:py-2.5 text-xs font-semibold uppercase tracking-wider rounded-lg bg-gradient-to-r from-[#D4A84F] to-[#E59A2F] hover:from-[#E59A2F] hover:to-[#D4A84F] text-[#071521] shadow-md shadow-[#D4A84F]/25 hover:shadow-lg hover:shadow-[#D4A84F]/40 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer whitespace-nowrap shrink-0"
               >
-                <span>Get a Service Quote</span>
+                <span className="hidden xl:inline">Get a Service Quote</span>
+                <span className="xl:hidden">Get Quote</span>
               </button>
             </div>
 

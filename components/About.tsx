@@ -120,6 +120,53 @@ export default function About() {
           </div>
 
         </div>
+
+        {/* Leadership / Promoters Subsection */}
+        <div className="mt-16 pt-12 border-t border-gray-200/80">
+          <div className="max-w-2xl mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0B1F33]/5 border border-[#0B1F33]/15 text-[#0B1F33] text-xs font-semibold uppercase tracking-wider mb-3">
+              Leadership
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#17202A] tracking-tight">
+              Leadership / Promoters
+            </h3>
+            <p className="text-sm text-[#5B6573] mt-2">
+              Trimurti Enterprises is guided by dedicated promoter leadership committed to professional operations, dependable service, and client satisfaction.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
+            {/* Dattatray Shankarrao Bedre */}
+            <div className="p-6 rounded-2xl bg-[#F5F7FA] border border-gray-200/80 shadow-xs hover:border-[#D4A84F]/50 transition-all flex items-center gap-4 group">
+              <div className="w-12 h-12 rounded-xl bg-[#0B1F33] text-[#D4A84F] flex items-center justify-center font-bold text-base shadow-sm shrink-0 group-hover:scale-105 transition-transform border border-[#D4A84F]/30">
+                DB
+              </div>
+              <div>
+                <h4 className="text-base sm:text-lg font-bold text-[#17202A] leading-snug">
+                  Dattatray Shankarrao Bedre
+                </h4>
+                <p className="text-xs sm:text-sm text-[#966F23] font-semibold mt-0.5">
+                  Promoter / Owner
+                </p>
+              </div>
+            </div>
+
+            {/* Shivam Dattatray Bedre */}
+            <div className="p-6 rounded-2xl bg-[#F5F7FA] border border-gray-200/80 shadow-xs hover:border-[#D4A84F]/50 transition-all flex items-center gap-4 group">
+              <div className="w-12 h-12 rounded-xl bg-[#0B1F33] text-[#D4A84F] flex items-center justify-center font-bold text-base shadow-sm shrink-0 group-hover:scale-105 transition-transform border border-[#D4A84F]/30">
+                SB
+              </div>
+              <div>
+                <h4 className="text-base sm:text-lg font-bold text-[#17202A] leading-snug">
+                  Shivam Dattatray Bedre
+                </h4>
+                <p className="text-xs sm:text-sm text-[#966F23] font-semibold mt-0.5">
+                  Promoter / Owner
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
